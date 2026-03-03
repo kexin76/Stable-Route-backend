@@ -19,15 +19,5 @@ if (!SUPABASE_PUBLISHABLE_KEY){
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
 
-// Make a request
-export async function fetchData() {
-   const { data, error } = await supabase.from('User').select('*')
-    if (!error){
-        return data
-    }else{
-        throw error
-    } 
-}
-
-
+export { supabase };
 
