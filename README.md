@@ -1,6 +1,7 @@
 # Backend for Stable Route
 
 This utilizes ExpressJs with typescript. Along with Supabase to host the database.
+Uses nodemon to automatically restart server when changes are detected.
 
 ## To run the backend:
 
