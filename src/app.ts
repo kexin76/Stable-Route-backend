@@ -1,13 +1,10 @@
 import express from 'express';
-import { fetchData } from '../src/config/supabase.ts'
+import users from './users/users-handlers.ts'
 const app = express()
 const port = 3000
 
-
-
 app.get('/', async (req, res) => {
-  const data = await fetchData()
-  res.send(data)
+  res.send("PLACEHOLDER")
 })
 
 app.listen(port, () => {
@@ -15,3 +12,4 @@ app.listen(port, () => {
 })
 
 
+app.use('/users',users)
